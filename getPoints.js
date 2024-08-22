@@ -41,4 +41,15 @@ async function getPoints() {
 
             console.log("Script is running...");
             console.log(`ID             : ${rewardPoint._id}`);
-            con
+            console.log(`Total Points    : ${totalPoints}`);
+            console.log(`Active Streak   : ${rewardPoint.activeStreak}`);
+        } else {
+            console.log("Failed to retrieve data.");
+        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
+}
+
+// Loop to keep the connection alive and get points every 15 seconds
+setInterval(getPoints, 15000);  // Wait for 15 seconds before the next request
