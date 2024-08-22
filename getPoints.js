@@ -1,7 +1,8 @@
-const fetch = require('node-fetch');
-const process = require('process');
+// Import node-fetch using ES module syntax
+import fetch from 'node-fetch';
+import process from 'process';
 
-// Get the Bearer token from the command line arguments
+// Get Bearer token from command line arguments
 const token = process.argv[2];
 
 if (!token) {
@@ -44,12 +45,12 @@ async function getPoints() {
             console.log(`Total Points    : ${totalPoints}`);
             console.log(`Active Streak   : ${rewardPoint.activeStreak}`);
         } else {
-            console.log("Failed to retrieve data.");
+            console.log("Failed to fetch data.");
         }
     } catch (error) {
         console.error("An error occurred:", error);
     }
 }
 
-// Loop to keep the connection alive and get points every 15 seconds
-setInterval(getPoints, 15000);  // Wait for 15 seconds before the next request
+// Keep the connection alive and fetch points every 15 seconds
+setInterval(getPoints, 15000);  // Wait 15 seconds before the next request
