@@ -1,3 +1,20 @@
 {
-  "type": "module"
+  "name": "aeropres-bot",
+  "version": "1.0.0",
+  "description": "A Node.js script to fetch points from the Aeropres API using a Bearer token.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "aeropres",
+    "api",
+    "automation",
+    "node.js"
+  ],
+  "author": "your_name",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
