@@ -1,6 +1,5 @@
-// Import node-fetch using ES module syntax
-import fetch from 'node-fetch';
-import process from 'process';
+const fetch = require('node-fetch');
+const process = require('process');
 
 // Get Bearer token from command line arguments
 const token = process.argv[2];
